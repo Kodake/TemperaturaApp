@@ -1,6 +1,6 @@
 <div *ngIf="mostrarError" class="alert alert-dismissible alert-danger">
     <div class="text-center">
-        <strong>ERROR AL OBTENER EL CLIMA</strong>
+        <strong>Error al obtener clima</strong>
     </div>
   </div>
 <div class="container pt-4">
@@ -9,10 +9,10 @@
             <img [src]="urlImagen" alt="img_clima" width="300px" height="300px">
         </div>
         <div class="col-lg-6">
-            <input type="text" [(ngModel)]="ciudad" class="form-control form-control-lg size"
+            <input type="text" [(ngModel)]="ciudad" class="form-control form-control-lg text-center size"
                 placeholder="Ingrese Ciudad">
             <button (click)="obtenerClima()" class="btn btn-primary btn-lg btn-block mt-4 size"
-                [disabled]="ciudad == ''">OBTENER CLIMA</button>
+                [disabled]="ciudad == ''">Obtener Clima</button>
 
             <div *ngIf="loading" class="text-center mt-3">
                 <div class="spinner-grow text-success" role="status"></div>
